@@ -68,6 +68,8 @@ function updateScrollEffects() {
   document.documentElement.style.setProperty('--page-progress', pageProgress.toFixed(4));
   document.documentElement.style.setProperty('--ambient-one-y', `${(pageProgress * 38).toFixed(2)}vh`);
   document.documentElement.style.setProperty('--ambient-two-y', `${(pageProgress * -28).toFixed(2)}vh`);
+  document.documentElement.style.setProperty('--tech-left-y', `${((pageProgress - 0.5) * 72).toFixed(2)}px`);
+  document.documentElement.style.setProperty('--tech-right-y', `${((0.5 - pageProgress) * 88).toFixed(2)}px`);
 
   if (reducedMotion.matches) return;
 
