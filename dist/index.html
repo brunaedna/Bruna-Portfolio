@@ -10,10 +10,14 @@
     <title>Bruna Edna Martins Ferreira — Portfólio</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
+    <script>document.documentElement.classList.add('js');</script>
     <script src="script.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+    <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+    <div class="ambient-orb ambient-orb-one" aria-hidden="true"></div>
+    <div class="ambient-orb ambient-orb-two" aria-hidden="true"></div>
 
     <header class="site-header" data-header>
       <a class="brand" href="#inicio" aria-label="Voltar ao início">
@@ -35,13 +39,13 @@
     </header>
 
     <main id="conteudo">
-      <section id="inicio" class="hero section-shell" aria-labelledby="hero-title">
+      <section id="inicio" class="hero section-shell" aria-labelledby="hero-title" data-scroll-scene>
         <div class="hero-art" aria-hidden="true">
           <img src="assets/hero-digital-landscape.png" alt="" />
         </div>
         <div class="hero-glow" aria-hidden="true"></div>
 
-        <div class="hero-content reveal">
+        <div class="hero-content reveal reveal-clip">
           <p class="eyebrow"><span></span> Desenvolvedora de Software</p>
           <h1 id="hero-title">Bruna Edna<br /><span>Martins Ferreira</span></h1>
           <p class="hero-copy">
@@ -53,17 +57,17 @@
           </div>
         </div>
 
-        <div class="hero-note reveal" aria-label="Áreas de atuação">
+        <div class="hero-note reveal reveal-right" aria-label="Áreas de atuação">
           <span>01</span>
           <p>Web · IA · Automação</p>
         </div>
       </section>
 
-      <section id="sobre" class="about section-shell section-pad">
-        <div class="section-index reveal">01 / Sobre</div>
+      <section id="sobre" class="about section-shell section-pad" data-scroll-scene>
+        <div class="section-index reveal reveal-left">01 / Sobre</div>
         <div class="about-grid">
-          <h2 class="section-title reveal">Tecnologia com propósito,<br /><em>clareza e cuidado.</em></h2>
-          <div class="about-copy reveal">
+          <h2 class="section-title reveal reveal-clip">Tecnologia com propósito,<br /><em>clareza e cuidado.</em></h2>
+          <div class="about-copy reveal reveal-right">
             <p>
               Sou estudante de <strong>Engenharia de Software</strong> e desenvolvedora focada em transformar ideias em produtos úteis, intuitivos e prontos para uso real.
             </p>
@@ -77,14 +81,14 @@
             </div>
           </div>
         </div>
-        <div class="skills reveal" aria-label="Tecnologias e competências">
+        <div class="skills reveal reveal-rise" aria-label="Tecnologias e competências">
           <span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Cloudflare</span><span>APIs</span><span>Webhooks</span><span>IA</span><span>SQL</span><span>Git</span>
         </div>
       </section>
 
-      <section id="experiencia" class="experience section-shell section-pad">
-        <div class="section-index reveal">02 / Experiência</div>
-        <div class="experience-card reveal">
+      <section id="experiencia" class="experience section-shell section-pad" data-scroll-scene>
+        <div class="section-index reveal reveal-left">02 / Experiência</div>
+        <div class="experience-card reveal reveal-scale" data-scroll-item>
           <div class="experience-period">
             <span>Dez 2025</span>
             <span class="period-line" aria-hidden="true"></span>
@@ -99,8 +103,8 @@
         </div>
       </section>
 
-      <section id="projetos" class="projects section-shell section-pad">
-        <div class="projects-heading reveal">
+      <section id="projetos" class="projects section-shell section-pad" data-scroll-scene>
+        <div class="projects-heading reveal reveal-clip">
           <div>
             <div class="section-index">03 / Projetos selecionados</div>
             <h2 class="section-title">Ideias que ganharam<br /><em>forma e função.</em></h2>
@@ -109,7 +113,7 @@
         </div>
 
         <div class="project-grid">
-          <article class="project-card project-featured reveal">
+          <article class="project-card project-featured reveal reveal-left" data-scroll-item>
             <div class="project-visual visual-flow" aria-hidden="true">
               <span class="visual-orbit orbit-one"></span><span class="visual-orbit orbit-two"></span>
               <span class="visual-core">BF</span>
@@ -126,7 +130,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card reveal reveal-left" data-scroll-item>
             <div class="project-visual visual-fitness" aria-hidden="true">
               <span class="pulse-line"></span><span class="visual-monogram">FA</span>
             </div>
@@ -142,7 +146,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card reveal reveal-right" data-scroll-item>
             <div class="project-visual visual-docs" aria-hidden="true">
               <span class="doc-sheet sheet-back"></span><span class="doc-sheet sheet-front">BD</span>
             </div>
@@ -158,7 +162,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card reveal reveal-scale" data-scroll-item>
             <div class="project-visual visual-erp" aria-hidden="true">
               <span class="bottle bottle-one"></span><span class="bottle bottle-two"></span><span class="bottle bottle-three"></span>
             </div>
@@ -176,8 +180,8 @@
         </div>
       </section>
 
-      <section id="contato" class="contact section-shell section-pad">
-        <div class="contact-card reveal">
+      <section id="contato" class="contact section-shell section-pad" data-scroll-scene>
+        <div class="contact-card reveal reveal-scale" data-scroll-item>
           <p class="eyebrow"><span></span> Vamos conversar</p>
           <h2>Tem uma ideia para<br /><em>tirar do papel?</em></h2>
           <p>Conheça meus projetos e entre em contato para conversar sobre oportunidades, produtos e novas ideias.</p>
