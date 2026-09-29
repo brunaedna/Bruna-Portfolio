@@ -7,8 +7,25 @@ const scrollProgress = document.querySelector('[data-scroll-progress]');
 const scrollScenes = [...document.querySelectorAll('[data-scroll-scene]')];
 const scrollItems = [...document.querySelectorAll('[data-scroll-item]')];
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const finePointer = window.matchMedia('(pointer: fine)');
+const customCursor = document.querySelector('[data-custom-cursor]');
 
 document.querySelector('[data-year]').textContent = new Date().getFullYear();
+
+if (finePointer.matches && !reducedMotion.matches && customCursor) {
+  document.documentElement.classList.add('custom-cursor-enabled');
+
+  window.addEventListener('pointermove', (event) => {
+    customCursor.style.setProperty('--cursor-x', `${event.clientX}px`);
+    customCursor.style.setProperty('--cursor-y', `${event.clientY}px`);
+    customCursor.classList.add('visible');
+    customCursor.classList.toggle('interactive', Boolean(event.target.closest?.('a, button')));
+  }, { passive: true });
+
+  window.addEventListener('pointerdown', () => customCursor.classList.add('pressed'));
+  window.addEventListener('pointerup', () => customCursor.classList.remove('pressed'));
+  document.documentElement.addEventListener('mouseleave', () => customCursor.classList.remove('visible'));
+}
 
 function closeMenu() {
   nav.classList.remove('open');
