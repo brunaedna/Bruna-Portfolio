@@ -152,7 +152,7 @@ function updateNarrative(height) {
     card.style.setProperty('--visual-shift', reducedMotion.matches ? '0px' : ((progress - .5) * 70) + 'px');
     card.style.setProperty('--visual-scale', reducedMotion.matches ? '1' : String(1.08 - progress * .08));
   });
-  projectCount.textContent = String(currentCard + 1).padStart(2, '0') + ' / 04';
+  projectCount.textContent = String(currentCard + 1).padStart(2, '0') + ' / ' + String(cards.length).padStart(2, '0');
   const cr = contact.getBoundingClientRect();
   const cp = reducedMotion.matches ? 1 : clamp((height - cr.top) / (height * .75));
   contact.style.setProperty('--contact-p', cp.toFixed(4));

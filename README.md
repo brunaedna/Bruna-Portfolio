@@ -9,7 +9,6 @@ Portfólio profissional de **Bruna Edna Martins Ferreira**, desenvolvedora de so
 - **BrunaFlow AI:** automações, webhooks, Gmail e inteligência artificial.
 - **Fitness Assistant:** assistente educativo de treino, alimentação e hábitos saudáveis.
 - **Bruna Docs:** consultas a documentos com respostas fundamentadas por IA.
-- **COD Perfumes ERP:** gestão de vendas, estoque, entregadores e movimentações financeiras.
 
 ## Tecnologias
 
@@ -34,7 +33,7 @@ Desenvolvido por **Bruna Edna Martins Ferreira**.
 
 ## Redesign editorial — outubro de 2026
 
-Nova direção em carvão, marfim e cobre, com tipografia ampla, retrato editorial e ilustrações próprias em CSS para os quatro projetos. As ilustrações são composições conceituais, não capturas das aplicações.
+Nova direção em carvão, marfim e cobre, com tipografia ampla, retrato editorial e ilustrações próprias em CSS para os três projetos. As ilustrações são composições conceituais, não capturas das aplicações.
 
 ### Interações
 
